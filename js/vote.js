@@ -12,21 +12,21 @@ $(document).ready(function(){
 		//initialize db storage names
 		var Launchrock = Parse.Object.extend("launchEmails");
 		
-		//loop through array of separated numbers sending them to db
-			var numbers = new Launchrock();
+		//loop through array of separated numbers emails them to db
+		var emails = new Launchrock();
 			
-			//send that shit to parse
-			numbers.save(
-				{number: n}, 
-				{
- 	 				success: function(object) {
-	    				//alert("yay! it worked");
-  					}
-  				}
-  			)
-		}
-	alert("!");
-	$(".form").hide();	
+		//send that shit to parse
+		email.save(
+			{email: n}, 
+			{
+ 				success: function(object) {
+				//alert("yay! it worked");
+				}
+			}
+		)
+		
+		//alert("!");
+		$(".form").hide();	
 	})
 
 	$("input").keypress(function(event) {
@@ -34,6 +34,6 @@ $(document).ready(function(){
         event.preventDefault();
         $("form").submit();
     }
-});
+	});
 	
-})
+});
