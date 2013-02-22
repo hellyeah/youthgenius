@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	Parse.initialize("khDpY9FUifJ1JAy3luL7OsfZHL0pnqCyzGaP7CQg", "IwKO6gWJfmz5FgZ90ZVLUbz2MEyfOhiFDpn23OnH");
+	Parse.initialize("cJuWw2KIaEhK5DsR26nqB2icj74QlUzu5XC4QhbO", "s5ORdEm9JqYLkSzjCiqXlIoFcBuMFRiAttSDPRSj");
 	
 	$(".form-wrapper").submit(function() {
 
@@ -10,15 +10,14 @@ $(document).ready(function(){
 		//maybe they do newline split rather than commas
 		
 		//initialize db storage names
-		var Launchrock = Parse.Object.extend("Dave_Launchrock");
+		var Launchrock = Parse.Object.extend("launchEmails");
 		
 		//loop through array of separated numbers sending them to db
-		for (var i = 0; i < n.length; i++) {
 			var numbers = new Launchrock();
 			
 			//send that shit to parse
 			numbers.save(
-				{number: n[i]}, 
+				{number: n}, 
 				{
  	 				success: function(object) {
 	    				//alert("yay! it worked");
@@ -26,8 +25,8 @@ $(document).ready(function(){
   				}
   			)
 		}
-	alert("Welcome to the club!");
-	$(".form").val("");	
+	alert("!");
+	$(".form").hide();	
 	})
 
 	$("input").keypress(function(event) {
