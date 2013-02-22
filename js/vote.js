@@ -8,19 +8,19 @@ $(document).ready(function(){
 		var str= ($(".form").val());
 		var n=str.split(",");
 		//maybe they do newline split rather than commas
-		
+		alert("blah");
 		//initialize db storage names
 		var Launchrock = Parse.Object.extend("launchEmails");
 		
 		//loop through array of separated numbers emails them to db
-		var emails = new Launchrock();
+		var emails = new launchEmails();
 			
 		//send that shit to parse
-		email.save(
+		emails.save(
 			{email: n}, 
 			{
  				success: function(object) {
-				//alert("yay! it worked");
+				alert("yay! it worked");
 				}
 			}
 		)
