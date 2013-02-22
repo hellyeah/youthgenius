@@ -12,7 +12,7 @@ $(document).ready(function(){
 		var launchEmails = new LaunchEmails();
 		launchEmails.save({email: str}, {
 		  success: function(object) {
-		    alert("yay! it worked");
+		    //alert("yay! it worked");
 		  }
 		});
 		

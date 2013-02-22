@@ -6,7 +6,7 @@
 }
 
 html, body {
-	background-image:url(http://static.twilk.com/static/images/twilk_background_4d2c2176557a2.jpg);
+	background-image:url(../images/bg.jpeg);
 	background-size:cover;
 	background-attachment:fixed;
 }
