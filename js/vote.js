@@ -12,14 +12,17 @@ $(document).ready(function(){
 		var launchEmails = new LaunchEmails();
 		launchEmails.save({email: str}, {
 		  success: function(object) {
-		    alert("yay! it worked");
 		  }
 		});
 		
 		//alert("!");
 		$(".form").val("");
 		e.preventDefault();
-		$(this).hide(1000);
+		$(this).fadeOut(300);
+		var self = this;
+		setTimeout(function(){
+			$('.thanks').fadeIn(300);
+		}, 300);
 		return false;	
 	})
 
